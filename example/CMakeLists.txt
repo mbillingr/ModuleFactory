@@ -12,7 +12,11 @@ add_executable(${PROJECT_NAME}
     BuiltinShape.h
     BuiltinShape.cpp
 )
-target_link_libraries( ${PROJECT_NAME} dl )
+
+if( WIN32 )
+else()
+	target_link_libraries( ${PROJECT_NAME} dl )
+endif()
 
 
 add_library( circle_shape MODULE
