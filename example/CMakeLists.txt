@@ -22,10 +22,12 @@ endif()
 add_library( circle_shape MODULE
     CircleShape.cpp
     CircleShape.h
+    ShapeInterface.h
 )
 
 
 add_library( square_shape MODULE
     SquareShape.cpp
     SquareShape.h
+    ShapeInterface.h
 )
