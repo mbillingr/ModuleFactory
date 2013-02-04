@@ -84,6 +84,22 @@ public:
         return get_instance().factory[class_id]();
     }
 
+    /**
+     * @brief get_IDs returns a list of registered class IDs.
+     * @return list of class IDs.
+     */
+    static std::list<keytype_t> get_IDs( )
+	{
+		std::list<keytype_t> ids;
+		factorymap_t &f = get_instance().factory;
+		typename factorymap_t::iterator it = f.begin();
+		for( ; it!=f.end(); it++ )
+		{
+			ids.push_back( it->first );
+		}
+		return ids;
+	}
+
 protected:
 
     template<class A, class B> friend class Proxy;
@@ -102,22 +118,6 @@ protected:
 
         f[class_id] = creator_func;
     }
-
-	/**
-     * @brief get_IDs returns a list of registered class IDs.
-     * @return list of class IDs.
-     */
-    static std::list<keytype_t> get_IDs( )
-	{
-		std::list ids;
-		factorymap_t &f = get_instance().factory;
-		typename factorymap_t::iterator it = f.begin();
-		for( ; it!=f.end(); it++ )
-		{
-			ids.push_back( it->first );
-		}
-		return ids;
-	}
 
 private:
     typedef typename interface::factorymap_t factorymap_t;
