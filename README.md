@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/kazemakase/ModuleFactory.svg?branch=master)](https://travis-ci.org/kazemakase/ModuleFactory)
+[![Coverage Status](https://coveralls.io/repos/kazemakase/ModuleFactory/badge.png?branch=master)](https://coveralls.io/r/kazemakase/ModuleFactory?branch=master)
 
 ModuleFactory
 =============
