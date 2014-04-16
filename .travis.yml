@@ -13,5 +13,5 @@ script:
   - make coveralls
 
 after_sucess:
-  - source coveralls-upload
+  - ./coveralls-upload
 
