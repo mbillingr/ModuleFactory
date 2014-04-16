@@ -4,4 +4,14 @@ compiler:
   - gcc
   - clang
   
-script: cmake example && make && ./dynclassldr
+script: 
+  - mkdir build
+  - cd build
+  - cmake -DCMAKE_BUILD_TYPE=Debug -DCOVERALLS=true .
+  - make
+  - cp example/*.so .
+  - make coveralls
+
+after_sucess:
+  - source coveralls-upload
+
