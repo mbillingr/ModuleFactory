@@ -7,7 +7,7 @@ compiler:
 script: 
   - mkdir build
   - cd build
-  - cmake -DCMAKE_BUILD_TYPE=Debug -DCOVERALLS=true .
+  - cmake -DCMAKE_BUILD_TYPE=Debug -DCOVERALLS=true ..
   - make
   - cp example/*.so .
   - make coveralls
