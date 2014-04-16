@@ -2,7 +2,6 @@ language: cpp
 
 compiler:
   - gcc
-  - clang
   
 script: 
   - mkdir build
@@ -11,7 +10,4 @@ script:
   - make
   - cp example/*.so .
   - make coveralls
-
-after_sucess:
   - ./coveralls-upload
-
