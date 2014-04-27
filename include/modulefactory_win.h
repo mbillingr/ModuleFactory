@@ -16,8 +16,8 @@
 */
 
 /**
- * @file modulefactory_gcc.h
- * GCC implementation
+ * @file modulefactory_win.h
+ * Windows (VC) implementation
  * Single-file header-only library, that provides a factory class for any base type.
  * Classes derived from that base type are registered to the factory at run-time.
  * Classes may be compiled in, or loaded from run-time modules.
@@ -27,8 +27,8 @@
  * @todo Registering does not work in Visual Studio 2008. Every dll seems to have its own instance of the ModuleFactory template. Does it work with newer compilers? Need to find workaround?
  */
 
-#ifndef MODULEFACTORY_GCC_H
-#define MODULEFACTORY_GCC_H
+#ifndef MODULEFACTORY_WIN_H
+#define MODULEFACTORY_WIN_H
 
 #include <map>
 #include <list>
@@ -144,4 +144,4 @@ private:
 
 // =====================================================================
 
-#endif // MODULEFACTORY_GCC_H
+#endif // MODULEFACTORY_WIN_H
